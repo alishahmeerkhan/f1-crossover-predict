@@ -43,8 +43,7 @@ def saveData(final_df):
     
     processed_dir = Path(processed_dir_str)
     processed_dir.mkdir(parents=True, exist_ok=True)
-    
-    # CRITICAL FIX: Use processed_dir (the Path object), not processed_dir_str (the string)
+
     target_file_path = processed_dir / 'data.csv'
     
     print(f'Exporting dataset ({len(final_df)} rows) to destination...')
