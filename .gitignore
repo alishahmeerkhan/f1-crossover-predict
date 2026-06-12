@@ -1,0 +1,7 @@
+# Local Environment Variables
+.env
+
+# Data Caching & Outputs
+data/raw/
+data/processed/
+data/predictions/
