@@ -37,3 +37,4 @@ The current master dataset consists of **~13,700 rows** of purely accurate racin
 3. Create a `.env` file at the root and define your absolute path for data storage:
    ```text
    DATA_PATH="C:/your/absolute/path/data/processed"
+   LOAD_PATH="C:your/absolute/path/data/processed/data.csv"
