@@ -1,12 +1,12 @@
 import os
+import fastf1
+import pandas as pd
 from pathlib import Path
 from dotenv import load_dotenv
-import pandas as pd
-import fastf1
 
 load_dotenv()
 
-def extractData(session):
+def extractData(session, race_name):
     print('Extracting and cleaning lap data...')
     
     laps = session.laps
@@ -28,6 +28,7 @@ def extractData(session):
     ml_df = ml_df.drop(columns=['LapTime'])
     
     ml_df = ml_df.dropna()
+    ml_df['race_name'] = race_name
     
     print(f'Data cleaned. Final dataset shape: {ml_df.shape}')
     return ml_df
@@ -69,8 +70,9 @@ if __name__ == '__main__':
         print(f'Extracing Data from {race}')
         session = fastf1.get_session(race[0], race[1], race[2])
         session.load(telemetry=False, weather=True)
+        race_name = session.event['EventName']
     
-        clean_df = extractData(session)
+        clean_df = extractData(session, race_name)
 
         final_df = pd.concat([final_df, clean_df], ignore_index=True)
         print('*' * 60)
