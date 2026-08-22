@@ -61,14 +61,14 @@ best_params = {
 }
 ```
 🚀 Roadmap\
-[x] Phase 1: API and historical session extraction.
-[x] Phase 2: Asynchronous time-series cleaning and dataset compilation.
-[x] Phase 3: Feature Engineering (Delta temps, target normalization).
-[x] Phase 4: Baseline Model Training (XGBoost Regressor for time delta) utilizing strict chronological splitting.
-[x] Phase 5: Advanced Feature Engineering (Rolling temperature/wetness windows, non-linear tire cliff modeling).
-[x] Phase 6: TimeSeriesSplit Cross-Validated Hyperparameter Optimization.
-[ ] Phase 7: XGBoost Compound Crossover Classification.
-[ ] Phase 8: Comparative Study (Gradient Boosted Trees vs. Multi-Layer Perceptron Neural Networks).
+- [x] **Phase 1:** API and historical session extraction.
+- [x] **Phase 2:** Asynchronous time-series cleaning and dataset compilation.
+- [x] **Phase 3:** Feature Engineering (Delta temps, target normalization).
+- [x] **Phase 4:** Baseline Model Training (XGBoost Regressor for time delta) utilizing strict chronological splitting.
+- [x] **Phase 5:** Advanced Feature Engineering (Rolling temperature averages, cumulative track wetness, non-linear tire cliff modeling).
+- [x] **Phase 6:** TimeSeriesSplit Cross-Validation Hyperparameter Optimization.
+- [ ] **Phase 7:** XGBoost Compound Crossover Classification.
+- [ ] **Phase 8:** Comparative Study (Gradient Boosted Trees vs. Multi-Layer Perceptiron Neural Networks)
 
 🛠️ Tech Stack
 Language: Python 3.10+
